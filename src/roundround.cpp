@@ -10,12 +10,8 @@ int main(int argc, char *argv[])
 
     geometry_msgs::Twist cmd_vel_message;
 
-    /*if (cmd_vel_message.angular.z >= 1){
-        cmd_vel_message.angular.z = cmd_vel_message.angular.z + 1;
-    }
-    else {*/
-        cmd_vel_message.angular.z = 1.0;
-    //}
+    cmd_vel_message.angular.z = 1.0;
+    
     cmd_vel_message.linear.x = 1.0; //Base was 1.0 changing positively makes bigger circles
 
     ros::Rate loop_rate(10);
